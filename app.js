@@ -38,7 +38,7 @@ app.post("/compare",upload.single("resume"),async function(req,res){
     
 
     const python_response=await axios.post(
-    "http://localhost:8000/extract-skills"
+    "http://localhost:8000/extract-skills",
     // {
     //     resume: resume,
     //     jobDescriptions: jobDescriptions

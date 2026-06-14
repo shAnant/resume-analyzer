@@ -39,29 +39,19 @@ class SkillRequest(BaseModel):
 #This is the function for skill extraction from resume,job description. Currently returning the mannual output.
 @app.post("/extract-skills")
 async def extract_skills(data: SkillRequest):
-    resume = data.resume_path    # this resume has the path where resume is stored
-    jobDescriptions = data.jobDescriptions
 
     #enter your code here and return the output in similar way
+
+    resume_skills = extract_skills(extract_text(data.resume_path))
+    
+    job_skills = job_skills_and_frequency(jobDescription=data.jobDescription)
+
+    # print(data)
 
     return {
         "resume_skills": resume_skills, #resume_skills :- datatype :- list, example : ['python', 'machine learning']
         "job_skills": job_skills  #job_skills :- datatype :- JSON, example : {'technical_skills'{'skill_1' : 3, 'skill_2' : 2}}
     }
-        "resume_skills": [
-            "Python",
-            "SQL",
-            "Machine Learning",
-            "nodejs"
-        ],
-        "job_skills": [
-            "Python",
-            "Docker",
-            "AWS",
-            "Node.js"
-        ]
-    }
-
 
 
 

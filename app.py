@@ -23,5 +23,3 @@ async def extract_skills(data : ResumeRequest):
         "resume_skills": resume_skills, #resume_skills :- datatype :- list, example : ['python', 'machine learning']
         "job_skills": job_skills  #job_skills :- datatype :- JSON, example : {'technical_skills'{'skill_1' : 3, 'skill_2' : 2}}
     }
-    
-    

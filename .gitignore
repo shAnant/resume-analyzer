@@ -1,2 +1,49 @@
-node_modules
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Environment Variables
 .env
+
+# Python build files
+build/
+dist/
+*.egg-info/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Frontend
+frontend/node_modules/
+
+node_modules/
+
+# Vite
+frontend/dist/
+
+# npm
+npm-debug.log*
+
+# Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Database files (if any local SQLite)
+*.db
+*.sqlite3
+
+testing_folder/

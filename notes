@@ -1,2 +1,14 @@
 # npm install concurrently --save-dev
 # to run two port at the same time
+
+go inside backend folder and run these command 
+
+       1- python -m venv venv
+
+       2- venv/scripts/activate  #to activate virtual environment for uvicorn, make sure you are inside backend folder
+
+       3- pip install fastapi uvicorn
+
+        #then you can run backend using this command
+
+       4- uvicorn main:app --reload  #make sure you are inside backend folder and venv is activated, to activate virtual environment, run command 2

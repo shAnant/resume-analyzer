@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel 
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
-from python_modules.resumeParser import extract_text, extract_skills
+from python_modules.resume_parser import extract_text, extract_skills
 from python_modules.job_skills_extrtact import job_skills_and_frequency
 
 
@@ -75,7 +75,7 @@ async def  compare(data: CompareRequest):
 
     
     # Semantic Matching
-    semantic_matched=[];
+    semantic_matched=[]
     semantic_missing = []
 
     resume_embeddings = {
